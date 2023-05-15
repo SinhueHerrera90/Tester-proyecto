@@ -1,0 +1,108 @@
+<div>
+  <div>
+    <h1>
+     Classes
+    </h1>
+  </div>
+</div>
+
+<hr>
+
+<%#div>
+  <div>
+    <h2>
+      Add a new post
+    </h2>
+
+    <form action="/insert_post" method="post">
+      <div>
+        <label for="activity_id_box">
+          Activity
+        </label>
+
+        <input type="text" id="activity_id_box" name="query_activity_id">
+      </div>
+
+      <div>
+        <label for="description_box">
+          Description
+        </label>
+
+        <input type="text" id="description_box" name="query_description">
+      </div>
+
+      <div>
+        <label for="location_id_box">
+          Location
+        </label>
+
+        <input type="text" id="location_id_box" name="query_location_id">
+      </div>
+
+      <button>
+        Create post
+      </button>
+    </form>
+  </div>
+</div %>
+
+<hr>
+<div>
+  <div>
+    <table border="1">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Activity
+        </th>
+
+        <th>
+          Description
+        </th>
+
+       <%# <th>
+          Location
+        </th>
+
+       
+          Website
+        </th>
+      #%>
+        </th>
+      </tr>
+
+      <% @list_of_posts.each do |a_post| %>
+      <tr>
+        <td>
+          <%= a_post.id %>
+        </td>
+
+        <td>
+          <%= a_post.activity.name %>
+        </td>
+
+        <td>
+          <%= a_post.description %>
+        </td>
+
+        <td>
+          <% a_post.location.address %>
+        </td>
+         <td>
+          <% a_post.location.website %>
+        </td>
+        <td>
+          <a href="/posts/<%= a_post.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<hr>

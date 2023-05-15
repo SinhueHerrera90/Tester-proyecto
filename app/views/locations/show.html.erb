@@ -1,0 +1,107 @@
+<div>
+  <div>
+    <h1>
+      Location #<%= @the_location.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/locations">
+          Go back
+        </a>
+      </div>
+
+      <%#div>
+        <a href="/delete_location/<%= @the_location.id %>
+    
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Activity
+      </dt>
+      <dd>
+        <%= @the_location.activity.name %>
+      </dd>
+
+      <dt>
+        Address
+      </dt>
+      <dd>
+        <%= @the_location.address %>
+      </dd>
+
+      <dt>
+        Image
+      </dt>
+      <dd>
+      <img src="<%= @the_location.image %>">
+            </dd>
+
+      <dt>
+        Website
+      </dt>
+      <dd>
+        <%= @the_location.website %>
+      </dd>
+
+      <dt>
+        Classes offered
+      </dt>
+      <dd>
+        <%= @the_location.activity.name %> 
+      </dd>
+
+    
+    </dl>
+  </div>
+</div>
+
+<%#hr>
+
+
+<%#div>
+  <%#div>
+    <h2>
+      Edit location
+    </h2>
+
+    <form action="/modify_location/<%= @the_location.id %> <%# method="post" >
+      <%#div>
+        <label for="activity_id_box">
+          Activity
+        </label>
+
+        <input type="text" id="activity_id_box" name="query_activity_id" value="<%= @the_location.activity_id %>
+      <%#/div>
+
+      <div>
+        <label for="address_box">
+          Address
+        </label>
+
+        <input type="text" id="address_box" name="query_address" value="<%= @the_location.address %>
+      <%#/div>
+
+      <div>
+        <label for="image_box">
+          Image
+        </label>
+
+        <input type="text" id="image_box" name="query_image" value="<%= @the_location.image %>
+      <%#/div>
+
+      <div>
+        <label for="website_box">
+          Website
+        </label>
+
+        <input type="text" id="website_box" name="query_website" value="<%= @the_location.website %>
+      <%#/div>
+
+      <button>
+        Update location
+      </button#%>
+    <%#/form%>

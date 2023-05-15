@@ -1,0 +1,86 @@
+<div>
+  <div>
+    <h1>
+      List of all activities
+    </h1>
+  </div>
+</div>
+
+<hr>
+
+<div>
+  <div>
+    <h2>
+      Add a new activity
+    </h2>
+
+    <form action="/insert_activity" method="post">
+      <div>
+        <label for="name_box">
+          Name
+        </label>
+
+        <input type="text" id="name_box" name="query_name">
+      </div>
+
+      <button>
+        Create activity
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
+<div>
+  <div>
+    <table border="1">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Name
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @list_of_activities.each do |an_activity| %>
+      <tr>
+        <td>
+          <%= an_activity.id %>
+        </td>
+
+        <td>
+          <%= an_activity.name %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(an_activity.created_at) %> ago
+        </td>
+        <td>
+          <%= time_ago_in_words(an_activity.updated_at) %> ago
+        </td>
+
+        <td>
+          <a href="/activities/<%= an_activity.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<hr>

@@ -1,0 +1,108 @@
+
+   <title>
+    Welcome :D
+   </title> 
+
+
+<div>
+  <div>
+    <h1>
+      <%= @the_post.activity.name %> class details
+    </h1>
+
+    <div class="items">
+      <div>
+        <a href="/posts">
+          Go back
+        </a>
+      </div>
+
+      <div>
+        <a href="/delete_post/<%= @the_post.id %>">
+          Delete post
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Activity
+      </dt>
+      <dd>
+        <%= @the_post.activity.name %>
+      </dd>
+
+      <dt>
+        Description
+      </dt>
+      <dd>
+        <%= @the_post.description %>
+      </dd>
+
+      <dt>
+        Location
+      </dt>
+      <dd>
+        <%= @the_post.location.address %>
+      </dd>
+     <img src="<%= @the_post.location.image %>"
+      </dd>
+      <dt>
+        Visit their webpage
+      </dt>
+      <dd>
+       <%=@the_post.location.website%>%
+      </dd>
+        <dt>
+    
+      </dt>
+      <dd>
+      
+      <%#dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_post.updated_at) %>
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+<%#
+<div>
+  <div>
+    <h2>
+      Edit post
+    </h2>
+
+    <form action="/modify_post/<%= @the_post.id %> <%#"  method="post" >
+      <div>
+        <label for="activity_id_box">
+          Activity
+        </label>
+
+        <input type="text" id="activity_id_box" name="query_activity_id" value="<%= @the_post.activity_id %> <%#
+      </div>
+
+      <div>
+        <label for="description_box">
+          Description
+        </label>
+
+        <input type="text" id="description_box" name="query_description" value="<%= @the_post.description %> <%#
+      </div>
+
+      <div>
+        <label for="location_id_box">
+          Location
+        </label>
+
+        <input type="text" id="location_id_box" name="query_location_id" value="<%= @the_post.location_id %>
+      </div>
+
+  </div>
+</div>
+
+<hr>
