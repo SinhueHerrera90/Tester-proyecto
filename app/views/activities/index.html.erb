@@ -1,4 +1,4 @@
-<div>
+<%#<div>
   <div>
     <h1>
       List of all activities
@@ -56,30 +56,30 @@
       </tr>
 
       <% @list_of_activities.each do |an_activity| %>
-      <tr>
+      <%#tr>
         <td>
           <%= an_activity.id %>
-        </td>
+        <%#/td>
 
         <td>
           <%= an_activity.name %>
-        </td>
+        <%#/td>
 
         <td>
           <%= time_ago_in_words(an_activity.created_at) %> ago
-        </td>
+        <%#/td>
         <td>
           <%= time_ago_in_words(an_activity.updated_at) %> ago
-        </td>
+        <%#/td>
 
         <td>
           <a href="/activities/<%= an_activity.id %>">
-            Show details
+            <%#Show details
           </a>
         </td>
       </tr>
       <% end %>
-    </table>
+    <%#/table>
   </div>
 </div>
 

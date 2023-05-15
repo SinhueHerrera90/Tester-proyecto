@@ -1,7 +1,7 @@
-<div>
+<%#div>
   <div>
     <h1>
-      Activity #<%= @the_activity.id %> details
+      Activity #<%= @the_activity.id %> <%#details
     </h1>
 
     <div>
@@ -13,7 +13,7 @@
 
       <div>
         <a href="/delete_activity/<%= @the_activity.id %>">
-          Delete activity
+          <%#Delete activity
         </a>
       </div>
     </div>
@@ -24,21 +24,21 @@
       </dt>
       <dd>
         <%= @the_activity.name %>
-      </dd>
+      <%#/dd>
 
       <dt>
         Created at
       </dt>
       <dd>
         <%= time_ago_in_words(@the_activity.created_at) %> ago
-      </dd>
+      <%#/dd>
 
       <dt>
         Updated at
       </dt>
       <dd>
         <%= time_ago_in_words(@the_activity.updated_at) %> ago
-      </dd>
+      <%#/dd>
     </dl>
   </div>
 </div>
@@ -53,13 +53,13 @@
     </h2>
 
     <form action="/modify_activity/<%= @the_activity.id %>"  method="post" >
-      <div>
+      <%#div>
         <label for="name_box">
           Name
         </label>
 
         <input type="text" id="name_box" name="query_name" value="<%= @the_activity.name %>">
-      </div>
+      <%#/div>
 
       <button>
         Update activity
