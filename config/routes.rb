@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-
-  get("/", {:controller => "posts", :action => "home"})
+root to: "application#root"
+  get("/homepage", {:controller => "posts", :action => "home"})
   # Routes for the Location resource:
 
   # CREATE
