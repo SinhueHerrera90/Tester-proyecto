@@ -9,7 +9,13 @@
  
    <title> Welcome :D</title>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
-  </head>
+     <style>
+            a {
+      color: inherit;
+      text-decoration: none;
+    }
+</style>  
+</head>
 
    <body>
 
@@ -17,14 +23,17 @@
 <div>
   <div>
     <h1 class="name">
-      <%= @the_post.activity.name %> class details
+      <%= @the_post.activity.name %> Class Details
     </h1>
 
     <div class="items">
       <div>
+
+        <button type="button" class="btn btn-outline-secondary">
         <a href="/posts">
           Go back
         </a>
+        </button>
       </div>
 
       <div>
@@ -55,7 +64,7 @@
       <dd>
         <%= @the_post.location.address %>
       </dd>
-     <img width=600px, lenght=500px src="<%= @the_post.location.image %>"
+     <img class="banner-image" width=600px, lenght=500px src="<%= @the_post.location.image %>"
       </dd>
       <dt>
        Webpage:

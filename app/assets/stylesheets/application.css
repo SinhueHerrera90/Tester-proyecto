@@ -20,7 +20,7 @@
  body{
  
   opacity: 1;
-  background-image: radial-gradient(circle at center center, #ffffff, #e1e1e1);
+  background-image: radial-gradient(circle at center center, #f1eeee, #cdc6c6);
   background-blend-mode: multiply;
 background-blend-mode: multiply;
   display:flex;
@@ -29,7 +29,8 @@ background-blend-mode: multiply;
   padding-bottom:40x;
  
 }
-
+.a{color: inherit;
+text-decoration: none;}
 
 .name {
   color: #2b2b2b;
@@ -54,13 +55,7 @@ background-blend-mode: multiply;
 
 
 .banner-image{
-margin: auto;
-width:200px;
-height: 200px;
-object-fit: cover;
-border-radius: 100%;
-position: relative;
-display: flex;
+border: #000000 solid;
 }
 .banner {
 margin: auto;

@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def home
-    render({ :template =>"layouts/pagina_inicio.html"})
+    render({ :template =>"posts/homepage.html.erb"})
 
     end
   def index

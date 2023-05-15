@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   # READ
 
 get("/homepage", {:controller => "posts", :action => "home"})
-  get("/posts", { :controller => "posts", :action => "index" })
+  get("/posts", {:controller => "posts", :action => "index" })
   
   get("/posts/:path_id", { :controller => "posts", :action => "show" })
   

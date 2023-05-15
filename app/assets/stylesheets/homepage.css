@@ -1,0 +1,12 @@
+body{
+ 
+  opacity: 1;
+  background-image: radial-gradient(circle at center center, #b64b4b, #cdc6c6);
+  background-blend-mode: multiply;
+background-blend-mode: multiply;
+  display:flex;
+  justify-content: center;
+  padding-top:10px;
+  padding-bottom:40x;
+ 
+}
