@@ -1,12 +1,15 @@
-<div>
-  <div>
-    <h1>
-     Classes
-    </h1>
-  </div>
-</div>
+<!DOCTYPE html>
+<html>
+ <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
 
-<hr>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" type="text/css" href="application.css">
+  <title>Adult Learner Hub</title> 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+  </head>
+
+<body>
 
 <%#div>
   <div>
@@ -46,14 +49,10 @@
   </div>
 </div %>
 
-<hr>
-<div>
-  <div>
-    <table border="1">
-      <tr>
-        <th>
-          ID
-        </th>
+
+<table class="table">
+    <thead>
+    <tr>   
 
         <th>
           Activity
@@ -71,28 +70,18 @@
           Website
         </th>
       #%>
-        </th>
+        
       </tr>
+      </thead>
+      <tbody>
 
       <% @list_of_posts.each do |a_post| %>
       <tr>
-        <td>
-          <%= a_post.id %>
-        </td>
-
-        <td>
-          <%= a_post.activity.name %>
-        </td>
+       <th scope="row"><%= a_post.activity.name %></th>
+       
 
         <td>
           <%= a_post.description %>
-        </td>
-
-        <td>
-          <% a_post.location.address %>
-        </td>
-         <td>
-          <% a_post.location.website %>
         </td>
         <td>
           <a href="/posts/<%= a_post.id %>">
@@ -100,9 +89,6 @@
           </a>
         </td>
       </tr>
-      <% end %>
-    </table>
-  </div>
-</div>
-
+      <% end %> 
+</table>
 <hr>

@@ -1,12 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
 
-   <title>
-    Welcome :D
-   </title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" type="text/css" href="appplication.css"
+   >
+ 
+   <title> Welcome :D</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+  </head>
+
+   <body>
 
 
 <div>
   <div>
-    <h1>
+    <h1 class="name">
       <%= @the_post.activity.name %> class details
     </h1>
 
@@ -18,41 +28,41 @@
       </div>
 
       <div>
-        <a href="/delete_post/<%= @the_post.id %>">
-          Delete post
+        <%#a href="/delete_post/<%= @the_post.id %>
+         <%# Delete post%>
         </a>
       </div>
     </div>
 
     <dl>
       <dt>
-        Activity
+        Activity:
       </dt>
       <dd>
         <%= @the_post.activity.name %>
       </dd>
 
       <dt>
-        Description
+        Description:
       </dt>
       <dd>
         <%= @the_post.description %>
       </dd>
 
       <dt>
-        Location
+        Location:
       </dt>
       <dd>
         <%= @the_post.location.address %>
       </dd>
-     <img src="<%= @the_post.location.image %>"
+     <img width=600px, lenght=500px src="<%= @the_post.location.image %>"
       </dd>
       <dt>
-        Visit their webpage
+       Webpage:
       </dt>
-      <dd>
-       <%=@the_post.location.website%>%
+       <a target="a_blank" href="<%= @the_post.location.website %>" ><%= @the_post.location.website%> </a>
       </dd>
+
         <dt>
     
       </dt>
@@ -68,7 +78,7 @@
   </div>
 </div>
 
-<hr>
+
 
 <%#
 <div>
@@ -100,9 +110,9 @@
         </label>
 
         <input type="text" id="location_id_box" name="query_location_id" value="<%= @the_post.location_id %>
-      </div>
+      
 
   </div>
 </div>
-
-<hr>
+</body>
+</html>

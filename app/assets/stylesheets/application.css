@@ -12,3 +12,145 @@
  *
  *= require_self
  */
+
+
+
+
+
+ body{
+ 
+  opacity: 1;
+  background-image: radial-gradient(circle at center center, #ffffff, #e1e1e1);
+  background-blend-mode: multiply;
+background-blend-mode: multiply;
+  display:flex;
+  justify-content: center;
+  padding-top:10px;
+  padding-bottom:40x;
+ 
+}
+
+
+.name {
+  color: #2b2b2b;
+  display: flex;
+  justify-content: center;
+  justify-items: flex-start;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+}
+.social-icons {
+  display:flex;
+  justify-content: space-around;
+  justify-items: flex-start;
+ 
+}
+
+.social-icons a {
+  color: #26d2db;
+  text-decoration: none;
+  
+}
+
+
+.banner-image{
+margin: auto;
+width:200px;
+height: 200px;
+object-fit: cover;
+border-radius: 100%;
+position: relative;
+display: flex;
+}
+.banner {
+margin: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+width:200px;
+height:200px;
+font-size:30px;
+color: #fff;
+background: none;
+border: none;
+border-radius: 100%; 
+position: relative;
+z-index: 0;
+transition: .3s;
+
+}
+
+
+.banner:before {
+content: "";
+position: absolute;
+inset: -8px;
+padding: 10px;
+border-radius: 50%; 
+background: conic-gradient(
+      #ff53bb ,
+      #0000 30deg 120deg,
+      #00f8d3 150deg 180deg,
+      #0000 210deg 300deg,
+      #ff53bb 330deg
+  );
+
+}
+@keyframes spin {
+0% {
+  transform: rotate(0);
+}
+100% {
+  transform: rotate(360deg);
+}
+}
+.banner:before {
+background-color: #222;
+  border: 2px solid #333;
+  animation: spin 9s linear infinite;
+}
+
+body {
+margin: 0;
+min-height: 100vh;
+display: grid;
+place-content: center;
+grid-auto-flow: column;
+
+}
+
+
+
+.thumbnail {
+width:45px;
+height: 45px;
+border-radius: 45px;
+object-fit: cover;
+border-style:inset
+}
+
+.link {
+background: linear-gradient(90deg, #e0e9ed, #dcedf3, #d8dada, #d6d9da);
+display: flex;
+align-items: center;
+border-radius: 30px;
+border-style: double;
+padding: 4px;
+
+}
+
+.link a {
+color: #000000;
+text-decoration: none;
+text-align: center;
+flex-grow: 1;
+}
+
+.items {
+display: flex;
+flex-direction: column;
+gap: 25px;
+max-width: 600px;
+justify-content: center;
+flex-grow: 1;
+}

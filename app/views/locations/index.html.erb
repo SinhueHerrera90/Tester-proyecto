@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-<div>
-  <div>
-    <h1 justify-content: center>
+ <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" type="text/css" href="application.css">
+  <title>Adult Learner Hub</title> 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+  </head>
+
+<body>
+    <div class="name">
    Locations
-    </h1>
-  </div>
-</div>
-
-<hr>
-
-<div>
+    </div>
+  
   <%#div>
     <h2>
       Add a new location
@@ -56,75 +58,37 @@
     </form>
   </div>
 </div %>
-
-<hr>
 <div>
   <div>
-    <table border="1">
+    <table border="2">
       <tr>
-        <th>
-          ID
-        </th>
-
         <th>
           Activity
         </th>
 
-        <th>
+        <%#th>
           Address
         </th>
 
         <th>
           Image
-        </th>
+        </th%>
 
-        <th>
+        <%#th>
           Website
         </th>
-
-        <th>
-          Created at
-        </th>
-
-        <th>
-          Updated at
-        </th>
-
         <th>
         </th>
-      </tr>
+      </tr%>
 
       <% @list_of_locations.each do |a_location| %>
       <tr>
+  
         <td>
-          <%= a_location.id %>
-        </td>
-
-        <td>
-          <%= a_location.activity_id %>
-        </td>
-
-        <td>
-          <%= a_location.address %>
-        </td>
-
-        <td>
-       <img width=300px, lenght=200px src="<%= a_location.image %>">
-        </td>
-
-        <td>
-          <%= a_location.website %>
-        </td>
-
-        <td>
-          <%= time_ago_in_words(a_location.created_at) %> ago
+          <%= a_location.activity.name %>
         </td>
         <td>
-          <%= time_ago_in_words(a_location.updated_at) %> ago
-        </td>
-
-        <td>
-          <a href="/locations/<%= a_location.id %>">
+          <a class="link" href="/locations/<%= a_location.id %>">
             Show details
           </a>
         </td>
