@@ -66,17 +66,36 @@
       </dd>
      <img class="banner-image" width=600px, lenght=500px src="<%= @the_post.location.image %>"
       </dd>
-      <dt>
-       Webpage:
+     
+      <dt style="text-align: center">
+       Website:
       </dt>
-       <a target="a_blank" href="<%= @the_post.location.website %>" ><%= @the_post.location.website%> </a>
+       <a class="website" target="a_blank" href="<%= @the_post.location.website %>" ><%= @the_post.location.website%> </a>
       </dd>
 
         <dt>
-    
+    <div class="star-rating">
+  <input type="radio" id="star5" name="rating" value="5">
+  <label for="star5"></label>
+  <input type="radio" id="star4" name="rating" value="4">
+  <label for="star4"></label>
+  <input type="radio" id="star3" name="rating" value="3">
+  <label for="star3"></label>
+  <input type="radio" id="star2" name="rating" value="2">
+  <label for="star2"></label>
+  <input type="radio" id="star1" name="rating" value="1">
+  <label for="star1"></label>
+</div>
+        <label  for="location_id_box">
+
+        <input class="commentbox" type="text" id="location_id_box" name="query_location_id">
       </dt>
       <dd>
-      
+        <button type="button" class="btn btn-outline-secondary">
+           Add Review
+          </a>
+          </button>
+        </td>
       <%#dt>
         Updated at
       </dt>
@@ -110,16 +129,8 @@
           Description
         </label>
 
-        <input type="text" id="description_box" name="query_description" value="<%= @the_post.description %> <%#
-      </div>
-
-      <div>
-        <label for="location_id_box">
-          Location
-        </label>
-
-        <input type="text" id="location_id_box" name="query_location_id" value="<%= @the_post.location_id %>
-      
+        <input type="text" id="description_box" name="query_description" value="<%= @the_post.description %> 
+    
 
   </div>
 </div>

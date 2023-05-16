@@ -77,8 +77,42 @@ body {
   z-index: 0;
   transition: .3s;
 }
+.commentbox{
+  display: flex;
+  border-radius:1%; 
+  width:600px;
+  height:80px;
+  display: flex;
+flex-direction: column;
+;
+max-width: 600px;
+justify-content: center;
 
+}
+.star-rating {
+  display: flex;
+  justify-content: center;
+}
 
+.star-rating input[type="radio"] {
+  display: none;
+}
+
+.star-rating label {
+  float: left;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.star-rating label:before {
+  content: "\2605";
+  
+}
+
+.star-rating input[type="radio"]:checked ~ label {
+ 
+  color: #62615f;
+}
 .banner:before {
   content: "";
   position: absolute;
@@ -108,7 +142,10 @@ body {
   border: 2px solid #333;
   animation: spin 9s linear infinite;
 }
-
+.website{
+  display: flex;
+  justify-content: center;
+}
 body {
 margin: 0;
 min-height: 100vh;
