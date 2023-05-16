@@ -10,6 +10,6 @@
 class Activity < ApplicationRecord
   has_many(:posts, { :class_name => "Post", :foreign_key => "activity_id" })
   has_many(:locations, { :class_name => "Location", :foreign_key => "activity_id" })
-  belongs_to :location
+  belongs_to(:user, { :required => true, :class_name => "User", :foreign_key => "user_id" })
 
 end
