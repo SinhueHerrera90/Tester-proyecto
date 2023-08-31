@@ -114,6 +114,7 @@ GEM
       xpath (~> 3.2)
     coderay (1.1.3)
     concurrent-ruby (1.1.10)
+    connection_pool (2.4.1)
     crack (0.4.5)
       rexml
     crass (1.0.6)
@@ -126,6 +127,8 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
     diffy (3.4.0)
+    dockerfile-rails (1.5.3)
+      rails
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.7.6)
@@ -260,6 +263,10 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rchardet (1.8.0)
+    redis (5.0.7)
+      redis-client (>= 0.9.0)
+    redis-client (0.16.0)
+      connection_pool
     regexp_parser (2.4.0)
     responders (3.0.1)
       actionpack (>= 5.0)
@@ -363,6 +370,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara
+  dockerfile-rails (>= 1.5)
   dotenv-rails
   draft_generators!
   factory_bot_rails
@@ -378,6 +386,7 @@ DEPENDENCIES
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
   rails_db (= 2.3.1)
+  redis (~> 5.0)
   rspec-html-matchers
   rspec-rails
   rufo
